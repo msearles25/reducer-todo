@@ -1,8 +1,13 @@
 import React from 'react';
 
+// components
+import Todo from './Todo';
+
 const TodoList = () => {
     return (
-        <div>I'm in the todo list!</div>
+        <div>
+            <Todo />
+        </div>
     )
 }
 
