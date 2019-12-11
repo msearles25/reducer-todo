@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 
 // components
@@ -8,7 +8,6 @@ import TodoForm from './components/todo/TodoForm';
 function App() {
   return (
     <div className="App">
-      <TodoForm />
       <TodoList />
     </div>
   );
