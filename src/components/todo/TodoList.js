@@ -10,14 +10,11 @@ import { reducer, initialState } from  '../../reducers/reducer';
 const TodoList = () => {
     const [taskState, dispatch] = useReducer(reducer, initialState);
 
-    const completedItem = id => {
-        dispatch({type: 'TOGGLE_COMPLETE', payload: id})
-    }
     return (
         <div>
             <TodoForm dispatch={dispatch}/>
             {taskState.todo.map(task => (
-                <Todo key={task.id} task={task} dispatch={dispatch} completedItem={completedItem}/>
+                <Todo key={task.id} task={task} dispatch={dispatch}/>
             ))}
             <button onClick={() => {dispatch({type: "CLEAR_COMPLETE"})}}>Remove Completed</button>
         </div>
